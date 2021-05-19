@@ -14,9 +14,32 @@
 //   return joinArray
 // }
 
+// function reverse(str) {
+//   return str.split('').reverse().join('');
+// }
+
+// This one is great to know, incase they ask for no reverse method 
+// and it also utilizes the new for loop syntax on line 25
+// function reverse(str) {
+//   let reversed = '';
+//   for (let character of str) {
+//     reversed = character + reversed;
+//   }
+//   return reversed;
+// }
+
+// this is another solution that implements usage of reduce
 function reverse(str) {
-  return str.split('').reverse().join('')
+  return str.split('').reduce((reversed, character) => {
+    return character + reversed;
+  }, '');
 }
+
+// This is basically the same function as above, but cleaned up that much more
+// function reverse(str) {
+//   return str.split('').reduce((rev, char) => 
+//     char + rev, '');
+// }
 
 // now with recrusion...
 
